@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cristóbal Anguita Luco – Academic Profile</title>
+  <meta name="description" content="Academic profile and research interests of Cristóbal Anguita Luco." />
+  <style>
+    :root{
+      --maxw: 880px;
+      --fg: #111;
+      --muted: #555;
+      --link: #0b4d92;
+      --accent: #eaeaea;
+    }
+    html{font-size:16px;}
+    body{
+      margin:0; padding:0; color:var(--fg); background:#fff;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      line-height:1.6;
+    }
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:2.5rem 1.25rem 4rem;}
+    header{border-bottom:1px solid var(--accent); margin-bottom:2rem; padding-bottom:1.25rem;}
+    h1{font-size:2.25rem; margin:0 0 .25rem 0; font-weight:700;}
+    h2{font-size:1.35rem; margin:2rem 0 .5rem; font-weight:700;}
+    h3{font-size:1.05rem; margin:1.25rem 0 .25rem; font-weight:700;}
+    p, li{font-size:1.02rem;}
+    .muted{color:var(--muted);}    
+    a{color:var(--link); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .grid{display:grid; grid-template-columns: 1fr; gap: 1.25rem;}
+    @media (min-width: 880px){
+      .grid{grid-template-columns: 2fr 1fr;}
+    }
+    .card{padding:1rem 1.25rem; background:#fff; border:1px solid var(--accent); border-radius:12px;}
+    .pill{display:inline-block; padding:.1rem .5rem; border:1px solid var(--accent); border-radius:999px; font-size:.9rem; color:#333;}
+    .list-unstyled{list-style:none; padding-left:0;}
+    footer{border-top:1px solid var(--accent); margin-top:2rem; padding-top:1rem; font-size:.95rem;}
+    .avatar{width:120px; height:120px; border-radius:60px; object-fit:cover; border:1px solid var(--accent);}    
+    .flex{display:flex; gap:1rem; align-items:center;}
+    .lang-toggle{margin-bottom:1rem;}
+    .hidden{display:none;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="flex">
+      <img src="https://via.placeholder.com/120" alt="Foto de perfil" class="avatar"/>
+      <div>
+        <h1>Cristóbal Anguita Luco</h1>
+        <div class="muted">Laboratorio de Ecología de Vida Silvestre, Facultad de Ciencias Forestales y Conservación de la Naturaleza, Universidad de Chile, Santiago, Chile</div>
+        <div class="muted"><a href="#">CV (PDF)</a> · <a href="https://scholar.google.com/citations?user=8ktiVdAAAAAJ&hl=es&oi=ao">Google Scholar</a> · <a href="https://orcid.org/0000-0001-6914-2742">ORCID</a></div>
+      </div>
+    </header>
+
+    <div class="lang-toggle">
+      <button onclick="setLang('es')">Español</button>
+      <button onclick="setLang('en')">English</button>
+    </div>
+
+    <div class="grid">
+      <main>
+        <section class="card">
+          <h2 class="lang es">Resumen</h2>
+          <h2 class="lang en hidden">Summary</h2>
+          <p class="lang es">Mi investigación se centra en el surgimiento y las consecuencias poblacionales de comportamientos desadaptativos en animales —con especial énfasis en las interacciones entre aves marinas y pesquerías— y en sus implicaciones para el manejo y la conservación. La principal herramienta para estudiar en este ámbito, y un área de interés independiente en sí misma, son los modelos basados en individuos.</p>
+          <p class="lang en hidden">My research focuses on the emergence and population-level consequences of maladaptive behaviors in animals — with a particular emphasis on seabird–fishery interactions — and on their implications for management and conservation. The main tool for studying in this field, and a research interest in its own right, are individual-based models.</p>
+        </section>
+
+        <section class="card">
+          <h2 class="lang es">Publicaciones seleccionadas</h2>
+          <h2 class="lang en hidden">Selected publications</h2>
+          <ol class="lang es">
+            <li>Espero que pronto.</li>
+          </ol>
+          <ol class="lang en hidden">
+            <li>Hopefully soon.</li>
+          </ol>
+        </section>
+      </main>
+
+      <aside>
+        <section class="card">
+          <h2 class="lang es">Intereses</h2>
+          <h2 class="lang en hidden">Interests</h2>
+          <ul class="list-unstyled lang es">
+            <li class="pill">Ecología de poblaciones</li>
+            <li class="pill">Trampas ecologicas</li>
+            <li class="pill">Modelos basados en individuos</li>
+            <li class="pill">Aves marinas</li>
+            <li class="pill">Pesquerías</li>
+            <li class="pill">Conservación</li>
+          </ul>
+          <ul class="list-unstyled lang en hidden">
+            <li class="pill">Population ecology</li>
+            <li class="pill">Ecological traps</li>
+            <li class="pill">Individual-based models</li>
+            <li class="pill">Seabirds</li>
+            <li class="pill">Fisheries</li>
+            <li class="pill">Conservation</li>
+          </ul>
+        </section>
+        <section class="card">
+          <h2 class="lang es">Contacto</h2>
+          <h2 class="lang en hidden">Contact</h2>
+          <p class="lang es">Laboratorio de Ecología de Vida Silvestre, Facultad de Ciencias Forestales y Conservación de la Naturaleza, Universidad de Chile<br/>Santiago, Chile</p>
+          <p class="lang en hidden">Laboratorio de Ecología de Vida Silvestre, Facultad de Ciencias Forestales y Conservación de la Naturaleza, Universidad de Chile</p>
+          <p>Email: <a href="mailto:cristobalanguita@ug.uchile.cl">mailto:cristobalanguita@ug.uchile.cl</a></p>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© <span id="year"></span> Cristóbal Anguita Luco</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function setLang(lang) {
+      document.querySelectorAll('.lang').forEach(el => {
+        if (el.classList.contains(lang)) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
