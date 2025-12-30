@@ -56,7 +56,7 @@
     }
     .list-unstyled{list-style:none; padding-left:0;}
     footer{border-top:1px solid var(--accent); margin-top:2rem; padding-top:1rem; font-size:.95rem;}
-    .avatar{width:120px; height:120px; border-radius:60px; object-fit:cover; border:1px solid var(--accent);}
+    .avatar{width:120px; height:120px; border-radius:60px; object-fit:cover; border:1px solid var(--accent);}    
     .flex{display:flex; gap:1rem; align-items:center;}
     .lang-toggle{margin-bottom:1rem;}
     .hidden{display:none;}
@@ -72,6 +72,19 @@
       background: var(--accent);
       color: var(--fg);
     }
+    .pub-actions { margin-top: .25rem; display:flex; gap:.5rem; align-items:center; flex-wrap:wrap; }
+    .pub-link {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .pub-link:hover, .pub-link:focus {
+      text-decoration: underline;
+    }
+    /* Hacemos que la línea del título y el enlace estén juntos */
+    .pub-item { margin-bottom: .75rem; }
+    .pub-meta { font-size: .98rem; color: var(--muted); display:block; margin-top:.15rem; }
   </style>
 </head>
 <body>
@@ -81,14 +94,12 @@
       <div>
         <h1>Cristóbal Anguita Luco</h1>
         <div class="muted">
-          <a href="https://levs.cl/" target="_blank">
-            Laboratorio de Ecología de Vida Silvestre
-          </a>
+          <a href="https://levs.cl/" target="_blank" rel="noopener">Laboratorio de Ecología de Vida Silvestre</a>
         </div>
         <div class="muted">
-          <a href="https://scholar.google.com/citations?user=8ktiVdAAAAAJ&hl=es&oi=ao">Google Scholar</a> · 
-          <a href="https://orcid.org/0000-0001-6914-2742">ORCID</a> ·
-          <a href="https://github.com/cristobalanguita">GitHub</a>
+          <a href="https://scholar.google.com/citations?user=8ktiVdAAAAAJ&hl=es&oi=ao" target="_blank" rel="noopener">Google Scholar</a> · 
+          <a href="https://orcid.org/0000-0001-6914-2742" target="_blank" rel="noopener">ORCID</a> ·
+          <a href="https://github.com/cristobalanguita" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </header>
@@ -103,27 +114,86 @@
         <section class="card">
           <h2 class="lang es">Resumen</h2>
           <h2 class="lang en hidden">Summary</h2>
-          <p class="lang es">Soy Biólogo Marino (Universidad Andrés Bello, 2016) y Magíster en Biología Marina por la misma institución. Realicé el Doctorado en Ciencias, mención Ecología y Biología Evolutiva, en la Universidad de Chile (2020–2025), con una tesis enfocada en cómo la interacción entre subsidios tróficos derivados de pesquerías, la mortalidad por captura incidental y el continuo lento–rápido de historia de vida condiciona la aparición de trampas ecológicas en sistemas ave marina–pesquería.
-Actualmente me desempeño como investigador en el Laboratorio de Ecología de Vida Silvestre (LEVS), donde participo en proyectos de ecología y conservación. Mi línea de investigación se centra en comprender el surgimiento y las consecuencias poblacionales de comportamientos desadaptativos inducidos por cambios ambientales de origen antrópico, con énfasis en las interacciones entre aves marinas y pesquerías, y sus implicancias para el manejo y la conservación.
-Para abordar estas preguntas, utilizo principalmente modelos basados en individuos (Individual-Based Models; IBM), que permiten evaluar mecanismos causales de manera espacialmente explícita y vincular la variación individual y el comportamiento con propiedades emergentes a escala poblacional.</p>
-          <p class="lang en hidden">I am a Marine Biologist (Universidad Andrés Bello, 2016) and hold an M.Sc. in Marine Biology from the same institution. I completed a Ph.D. in Science (Ecology and Evolutionary Biology track) at the University of Chile (2020–2025), with a dissertation examining how the interaction between fisheries-derived trophic subsidies, incidental bycatch mortality, and the slow–fast life-history continuum shapes the emergence of ecological traps in seabird–fishery systems.
-I am currently a researcher at the Wildlife Ecology Laboratory (LEVS), where I contribute to ecology and conservation projects. My research focuses on understanding the emergence and population-level consequences of maladaptive behaviors driven by human-induced environmental change, with an emphasis on seabird–fishery interactions and their implications for management and conservation.
+          <p class="lang es">Soy Biólogo Marino (Universidad Andrés Bello, 2016) y Magíster en Biología Marina por la misma institución. Realicé el Doctorado en Ciencias, mención Ecología y Bi[...] 
+Actualmente me desempeño como investigador en el Laboratorio de Ecología de Vida Silvestre (LEVS), donde participo en proyectos de ecología y conservación. Mi línea de investigación se centra en[...] 
+Para abordar estas preguntas, utilizo principalmente modelos basados en individuos (Individual-Based Models; IBM), que permiten evaluar mecanismos causales de manera espacialmente explícita y vincula[...]</p>
+          <p class="lang en hidden">I am a Marine Biologist (Universidad Andrés Bello, 2016) and hold an M.Sc. in Marine Biology from the same institution. I completed a Ph.D. in Science (Ecology and[...] 
+I am currently a researcher at the Wildlife Ecology Laboratory (LEVS), where I contribute to ecology and conservation projects. My research focuses on understanding the emergence and population-level [...] 
 
-To address these questions, I primarily use individual-based models (IBMs), which enable spatially explicit tests of causal mechanisms and link individual variation and behavior to emergent population-level properties.</p>
+To address these questions, I primarily use individual-based models (IBMs), which enable spatially explicit tests of causal mechanisms and link individual variation and behavior to emergent population[...]</p>
         </section>
 
         <section class="card">
           <h2 class="lang es">Publicaciones seleccionadas</h2>
           <h2 class="lang en hidden">Selected publications</h2>
           <ol class="lang es">
-            <li>Anguita, C., Simeone, A., & Estades, C. F. (2026). The emergence of ecological traps in marine ecosystems: The case of seabirds and fisheries. Biological Conservation, 314, 111674. https://doi.org/10.1016/j.biocon.2025.111674</li>
-            <li>Anguita, C., Simeone, A., & Estades, C. F. (preprint). When is the Bait Worth the Risk? Modeling a Compensatory Ecological Trap in Seabirds. SSRN.</li>
-            <li>Fitness trade-offs from fishery-derived subsidies and bycatch mortality: modeling a compensatory ecological trap in seabirds. PhD thesis. 2025.</li>
+            <li class="pub-item">
+              <a
+                class="pub-link"
+                href="https://raw.githubusercontent.com/cristobalanguita/cristobalanguita.github.io/main/2026_Biol%20Conserv.pdf"
+                onclick="event.preventDefault(); downloadPDF('https://raw.githubusercontent.com/cristobalanguita/cristobalanguita.github.io/main/2026_Biol%20Conserv.pdf','2026_Biol_Conserv.pdf')"
+                role="link"
+                aria-label="Descargar The emergence of ecological traps in marine ecosystems: The case of seabirds and fisheries (PDF)"
+                >Anguita, C., Simeone, A., & Estades, C. F. (2026). The emergence of ecological traps in marine ecosystems: The case of seabirds and fisheries. Biological Conservation, 314, 111674.</a>
+              <span class="pub-meta">Descargar PDF</span>
+            </li>
+
+            <li class="pub-item">
+              <a
+                class="pub-link"
+                href="https://raw.githubusercontent.com/cristobalanguita/cristobalanguita.github.io/main/FE-2025-01675_Proof_hi.pdf"
+                onclick="event.preventDefault(); downloadPDF('https://raw.githubusercontent.com/cristobalanguita/cristobalanguita.github.io/main/FE-2025-01675_Proof_hi.pdf','FE-2025-01675_Proof_hi.pdf')"
+                role="link"
+                aria-label="Descargar When is the Bait Worth the Risk? Modeling a Compensatory Ecological Trap in Seabirds (proof PDF)"
+                >Anguita, C., Simeone, A., & Estades, C. F. (preprint). When is the Bait Worth the Risk? Modeling a Compensatory Ecological Trap in Seabirds. SSRN.</a>
+              <span class="pub-meta">Descargar proof / PDF</span>
+            </li>
+
+            <li class="pub-item">
+              <a
+                class="pub-link"
+                href="https://raw.githubusercontent.com/cristobalanguita/cristobalanguita.github.io/main/Escrito%20Tesis%20Cristobal%20Anguita.pdf"
+                onclick="event.preventDefault(); downloadPDF('https://raw.githubusercontent.com/cristobalanguita/cristobalanguita.github.io/main/Escrito%20Tesis%20Cristobal%20Anguita.pdf','Tesis_Cristobal_Anguita.pdf')"
+                role="link"
+                aria-label="Descargar Fitness trade-offs from fishery-derived subsidies and bycatch mortality: modeling a compensatory ecological trap in seabirds. PhD thesis (PDF)"
+                >Fitness trade-offs from fishery-derived subsidies and bycatch mortality: modeling a compensatory ecological trap in seabirds. PhD thesis. 2025.</a>
+              <span class="pub-meta">Descargar tesis (PDF)</span>
+            </li>
           </ol>
+
           <ol class="lang en hidden">
-            <li>Anguita, C., Simeone, A., & Estades, C. F. (2026). The emergence of ecological traps in marine ecosystems: The case of seabirds and fisheries. Biological Conservation, 314, 111674. https://doi.org/10.1016/j.biocon.2025.111674</li>
-            <li>Anguita, C., Simeone, A., & Estades, C. F. (preprint). When is the Bait Worth the Risk? Modeling a Compensatory Ecological Trap in Seabirds. SSRN.</li>
-            <li>Fitness trade-offs from fishery-derived subsidies and bycatch mortality: modeling a compensatory ecological trap in seabirds. PhD thesis. 2025.</li>
+            <li class="pub-item">
+              <a
+                class="pub-link"
+                href="https://raw.githubusercontent.com/cristobalanguita/cristobalanguita.github.io/main/2026_Biol%20Conserv.pdf"
+                onclick="event.preventDefault(); downloadPDF('https://raw.githubusercontent.com/cristobalanguita/cristobalanguita.github.io/main/2026_Biol%20Conserv.pdf','2026_Biol_Conserv.pdf')"
+                role="link"
+                aria-label="Download The emergence of ecological traps in marine ecosystems: The case of seabirds and fisheries (PDF)"
+                >Anguita, C., Simeone, A., & Estades, C. F. (2026). The emergence of ecological traps in marine ecosystems: The case of seabirds and fisheries. Biological Conservation, 314, 111674.</a>
+              <span class="pub-meta">Download PDF</span>
+            </li>
+
+            <li class="pub-item">
+              <a
+                class="pub-link"
+                href="https://raw.githubusercontent.com/cristobalanguita/cristobalanguita.github.io/main/FE-2025-01675_Proof_hi.pdf"
+                onclick="event.preventDefault(); downloadPDF('https://raw.githubusercontent.com/cristobalanguita/cristobalanguita.github.io/main/FE-2025-01675_Proof_hi.pdf','FE-2025-01675_Proof_hi.pdf')"
+                role="link"
+                aria-label="Download When is the Bait Worth the Risk? Modeling a Compensatory Ecological Trap in Seabirds (proof PDF)"
+                >Anguita, C., Simeone, A., & Estades, C. F. (preprint). When is the Bait Worth the Risk? Modeling a Compensatory Ecological Trap in Seabirds. SSRN.</a>
+              <span class="pub-meta">Download proof / PDF</span>
+            </li>
+
+            <li class="pub-item">
+              <a
+                class="pub-link"
+                href="https://raw.githubusercontent.com/cristobalanguita/cristobalanguita.github.io/main/Escrito%20Tesis%20Cristobal%20Anguita.pdf"
+                onclick="event.preventDefault(); downloadPDF('https://raw.githubusercontent.com/cristobalanguita/cristobalanguita.github.io/main/Escrito%20Tesis%20Cristobal%20Anguita.pdf','Tesis_Cristobal_Anguita.pdf')"
+                role="link"
+                aria-label="Download Fitness trade-offs from fishery-derived subsidies and bycatch mortality: modeling a compensatory ecological trap in seabirds. PhD thesis (PDF)"
+                >Fitness trade-offs from fishery-derived subsidies and bycatch mortality: modeling a compensatory ecological trap in seabirds. PhD thesis. 2025.</a>
+              <span class="pub-meta">Download thesis (PDF)</span>
+            </li>
           </ol>
         </section>
       </main>
@@ -157,7 +227,6 @@ To address these questions, I primarily use individual-based models (IBMs), whic
             <li class="pill">Causal inference</li>
             <li class="pill">Bayesian models</li>
             <li class="pill">Programing</li>
-
           </ul>
         </section>
         <section class="card">
@@ -185,6 +254,26 @@ To address these questions, I primarily use individual-based models (IBMs), whic
           el.classList.add('hidden');
         }
       });
+    }
+
+    // Descarga un PDF desde una URL raw de GitHub y fuerza la descarga con el nombre proporcionado.
+    async function downloadPDF(url, filename) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Error al descargar: ' + res.status);
+        const blob = await res.blob();
+        const blobUrl = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = blobUrl;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+      } catch (err) {
+        console.error(err);
+        alert('No se pudo descargar el archivo. Puedes intentar abrir el PDF directamente desde GitHub.');
+      }
     }
   </script>
 </body>
